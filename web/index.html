@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Real-Time Face Blur</title>
+
+    <link
+        rel="stylesheet"
+        href="/style.css"
+    >
+</head>
+
+<body>
+
+<main class="app">
+
+    <header class="header">
+        <h4>
+            REAL-TIME FACE ANONYMIZATION
+            <span>MediaPipe · Canvas · Local Processing</span>
+        </h4>
+    </header>
+
+
+    <section class="viewer">
+
+        <video
+            id="video"
+            autoplay
+            playsinline
+        ></video>
+
+        <canvas id="canvas"></canvas>
+
+        <div id="message">
+            CAMERA IS OFF
+        </div>
+
+    </section>
+
+
+    <section class="controls">
+
+        <div class="control-header">
+
+            <span>
+                BLUR LEVEL
+            </span>
+
+            <span id="blurValue">
+                50
+            </span>
+
+        </div>
+
+
+        <div class="slider-container">
+
+            <span>0</span>
+
+            <input
+                id="blurSlider"
+                type="range"
+                min="1"
+                max="100"
+                value="50"
+            >
+
+            <span>100</span>
+
+        </div>
+
+        <div class="setting-row">
+
+            <span>
+                MIRROR
+            </span>
+
+            <label class="switch">
+
+                <input
+                    type="checkbox"
+                    id="mirrorToggle"
+                >
+
+                <span class="switch-slider"></span>
+
+            </label>
+
+        </div>
+
+
+        <div class="status-panel">
+
+            <div class="status-row">
+
+                <span>
+                    Faces detected
+                </span>
+
+                <span id="faceCount">
+                    0
+                </span>
+
+            </div>
+
+
+            <div class="status-row">
+
+                <span>
+                    Detection
+                </span>
+
+                <span>
+                    MediaPipe
+                </span>
+
+            </div>
+
+
+            <div class="status-row">
+
+                <span>
+                    Processing
+                </span>
+
+                <span>
+                    Local
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="buttons">
+
+            <button
+                id="startButton"
+            >
+                START CAMERA
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <p
+        id="status"
+        class="system-status"
+    >
+        Initializing...
+    </p>
+
+    <footer class="footer">
+        © 2025 6dchair 
+    </footer>
+
+</main>
+
+
+<script
+    type="module"
+    src="/app.js"
+></script>
+
+</body>
+
+</html>
